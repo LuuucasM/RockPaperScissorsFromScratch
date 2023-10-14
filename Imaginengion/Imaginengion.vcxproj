@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -73,6 +73,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>C:\Dev\RockPaperScissorsFromScratch\Imaginengion\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Dev\RockPaperScissorsFromScratch\Imaginengion\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)bin-int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\Dev\RockPaperScissorsFromScratch\Imaginengion\include;$(IncludePath)</IncludePath>
@@ -110,7 +112,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IMAGINE_PLATFORM_WINDOWS;IMAGINE_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -137,8 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="ECS\CollisionSystem.cpp" />
     <ClCompile Include="ECS\ComponentManager.cpp" />
+    <ClCompile Include="ECS\ECSCoordinator.cpp" />
     <ClCompile Include="ECS\MovementSystem.cpp" />
     <ClCompile Include="ECS\ParticleSystem.cpp" />
     <ClCompile Include="ECS\RenderSystem2D.cpp" />
@@ -148,6 +152,8 @@
     <ClCompile Include="Time\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Core.h" />
     <ClInclude Include="ECS\CollisionSystem.h" />
     <ClInclude Include="ECS\ComponentArray.h" />
     <ClInclude Include="ECS\ComponentManager.h" />
@@ -160,6 +166,9 @@
     <ClInclude Include="ECS\RenderSystem2D.h" />
     <ClInclude Include="ECS\System.h" />
     <ClInclude Include="ECS\SystemManager.h" />
+    <ClInclude Include="Entry.h" />
+    <ClInclude Include="EntryPoint.h" />
+    <ClInclude Include="Imagine.h" />
     <ClInclude Include="Levels\GameLevel.h" />
     <ClInclude Include="Math\Math.h" />
     <ClInclude Include="Rendering\RenderManager.h" />

@@ -5,7 +5,11 @@
 
 #include <fstream>
 
+std::map<std::string, Shader> ResourceManager::Shaders;
+std::map<std::string, Texture2D> ResourceManager::Textures;
+
 Shader ResourceManager::LoadShader(const char* vShaderPath, const char* fShaderPath, const char* gShaderPath, const char *name) {
+	/*
 	//retrive code from files
 	std::string vShaderSource;
 	std::string fShaderSource;
@@ -49,6 +53,9 @@ Shader ResourceManager::LoadShader(const char* vShaderPath, const char* fShaderP
 	shader.Init(vShaderCode, fShaderCode, gShaderPath != nullptr ? gShaderCode : nullptr, name);
 	Shaders[name] = shader;
 	return shader;
+	*/
+	Shader shader;
+	return shader;
 }
 Shader& ResourceManager::GetShader(const char *name) {
 	return Shaders[name];
@@ -56,6 +63,7 @@ Shader& ResourceManager::GetShader(const char *name) {
 
 Texture2D ResourceManager::LoadTexture(const char* file, bool alpha, const char* name) {
 	Texture2D texture;
+	/*
 	if (alpha) {
 		texture.Internal_Format = GL_RGBA;
 		texture.Image_Format = GL_RGBA;
@@ -65,6 +73,7 @@ Texture2D ResourceManager::LoadTexture(const char* file, bool alpha, const char*
 	texture.Generate(width, height, data);
 	stbi_image_free(data);
 	Textures[name] = texture;
+	*/
 	return texture;
 }
 Texture2D& ResourceManager::GetTexture(const char* name) {
@@ -72,10 +81,23 @@ Texture2D& ResourceManager::GetTexture(const char* name) {
 }
 
 void ResourceManager::Delete() {
+	/*
 	for (auto i : Shaders) {
 		i.second.Delete();
 	}
 	for (auto i : Textures) {
 		glDeleteTextures(1, &i.second.ID);
 	}
+	*/
+}
+
+ResourceManager::~ResourceManager() {
+	/*
+	for (auto i : Shaders) {
+		i.second.Delete();
+	}
+	for (auto i : Textures) {
+		glDeleteTextures(1, &i.second.ID);
+	}
+	*/
 }
