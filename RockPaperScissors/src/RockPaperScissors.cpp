@@ -1,4 +1,4 @@
-#include <Imagine.h>
+#include <Imaginengion/Imagine.h>
 
 class RockPaperScissors : public IM::Application {
 public:
