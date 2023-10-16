@@ -132,11 +132,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Imaginengion\Imaginengion.vcxproj">
-      <Project>{4096c13e-1b45-4763-a7ae-63e7d4ec22ab}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="src\RockPaperScissors.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
