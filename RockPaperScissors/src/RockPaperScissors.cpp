@@ -1,4 +1,4 @@
-#include <Imaginengion/Imagine.h>
+#include <../Imagine.h>
 
 class RockPaperScissors : public IM::Application {
 public:
@@ -10,6 +10,6 @@ public:
 	}
 };
 
-IM::Application *IM::CreateApplication() {
+IM::Application* IM::CreateApplication() {
 	return new RockPaperScissors();
 }

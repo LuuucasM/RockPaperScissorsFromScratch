@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.vcxproj", "{4DE82B1D-8878-4A5D-A12A-1FC66A3A8FA6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Imaginengion", "Imaginengion\Imaginengion\Imaginengion.vcxproj", "{4096C13E-1B45-4763-A7AE-63E7D4EC22AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{4DE82B1D-8878-4A5D-A12A-1FC66A3A8FA6}.Release|x64.Build.0 = Release|x64
 		{4DE82B1D-8878-4A5D-A12A-1FC66A3A8FA6}.Release|x86.ActiveCfg = Release|Win32
 		{4DE82B1D-8878-4A5D-A12A-1FC66A3A8FA6}.Release|x86.Build.0 = Release|Win32
+		{4096C13E-1B45-4763-A7AE-63E7D4EC22AB}.Debug|x64.ActiveCfg = Debug|x64
+		{4096C13E-1B45-4763-A7AE-63E7D4EC22AB}.Debug|x64.Build.0 = Debug|x64
+		{4096C13E-1B45-4763-A7AE-63E7D4EC22AB}.Debug|x86.ActiveCfg = Debug|Win32
+		{4096C13E-1B45-4763-A7AE-63E7D4EC22AB}.Debug|x86.Build.0 = Debug|Win32
+		{4096C13E-1B45-4763-A7AE-63E7D4EC22AB}.Release|x64.ActiveCfg = Release|x64
+		{4096C13E-1B45-4763-A7AE-63E7D4EC22AB}.Release|x64.Build.0 = Release|x64
+		{4096C13E-1B45-4763-A7AE-63E7D4EC22AB}.Release|x86.ActiveCfg = Release|Win32
+		{4096C13E-1B45-4763-A7AE-63E7D4EC22AB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
